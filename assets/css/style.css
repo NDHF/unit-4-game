@@ -1,0 +1,54 @@
+body {
+    background-color: lightblue;
+}
+
+div.characterSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.character {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+}
+
+div#luke {
+    background-color: green;
+}
+
+div#obiWan {
+    background-color: blue;
+}
+
+div#sidious {
+    background-color: darkgray;
+}
+
+div#maul {
+    background-color: red;
+}
+
+div.characterPicDiv {
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+}
+
+img.characterPic {
+    height: 200px;
+    width: 200px;
+}
+
+p.hpStats {
+    text-align: center;
+}
+
+h1.center {
+    text-align: center;
+}
