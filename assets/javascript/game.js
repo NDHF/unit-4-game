@@ -93,8 +93,6 @@ $(".roster").on("click", function() {
     
 });
 
-
-
 });
 
 // $("div.defender").remove();
