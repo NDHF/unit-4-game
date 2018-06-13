@@ -10,56 +10,60 @@
 
 <body>
 
-<div class="characterSelect">
+<div id="characterRoster">
 
-    <div id="luke" class="character">
-        <div class="characterPicDiv">
-            <img id="lukeImage" class="characterPic" src="" alt="character pic: Luke" title="character pic">
+    <h1 id="characterRosterHeading" class="center">Choose Your Character</h1>
+
+    <div id="characterSelect">
+
+        <div id="luke" class="roster character">
+            <div class="characterPicDiv">
+                <img id="lukeImage" class="characterPic" src="" alt="character pic: Luke" title="character pic">
+            </div>
+            <div class="hpStatsDiv">
+            <p class="hpStats" id="lukeHP"></p>
+            </div>
         </div>
-        <div class="hpStatsDiv">
-           <p class="hpStats">100</p>
+
+        <div id="obiWan" class="roster character">
+                <div class="characterPicDiv">
+                    <img id="obiWanImage" class="characterPic" src="" alt="character pic: Obi-Wan" title="character pic">
+                </div>
+                <div class="hpStatsDiv">
+                    <p class="hpStats" id="obiWanHP"></p>
+                </div>
         </div>
-    </div>
 
-    <div id="obiWan" class="character">
-            <div class="characterPicDiv">
-                <img id="obiWanImage" class="characterPic" src="" alt="character pic: Obi-Wan" title="character pic">
-            </div>
-            <div class="hpStatsDiv">
-                <p class="hpStats">100</p>
-            </div>
-    </div>
+        <div id="sidious" class="roster character">
+                <div class="characterPicDiv">
+                    <img id="sidiousImage" class="characterPic" src="" alt="character pic: Darth Sidious" title="character pic">
+                </div>
+                <div class="hpStatsDiv">
+                    <p class="hpStats" id="sidiousHP"></p>
+                </div>
+        </div>
 
-    <div id="sidious" class="character">
-            <div class="characterPicDiv">
-                <img id="sidiousImage" class="characterPic" src="" alt="character pic: Darth Sidious" title="character pic">
-            </div>
-            <div class="hpStatsDiv">
-                <p class="hpStats">100</p>
-            </div>
-    </div>
+        <div id="maul" class="roster character">
+                <div class="characterPicDiv">
+                    <img id="darthMaul" class="characterPic" src="" alt="character pic: Darth Maul" title="character pic">
+                </div>
+                <div class="hpStatsDiv">
+                    <p class="hpStats" id="maulHP"></p>
+                </div>
+        </div>
 
-    <div id="maul" class="character">
-            <div class="characterPicDiv">
-                <img id="darthMaul" class="characterPic" src="" alt="character pic: Darth Maul" title="character pic">
-            </div>
-            <div class="hpStatsDiv">
-                <p class="hpStats">100</p>
-            </div>
     </div>
 
 </div>
 
-<div id="yourCharacterDiv">
+<div id="yourCharacter">
     <h1 id="yourCharacterHeading" class="center">Your Character</h1>
+    <div id="yourCharacterDiv"></div>
 </div>
 
-<div id="enemiesDiv">
+<div id="enemies">
         <h1 id="enemyHeading" class="center">Enemy</h1>
-</div>
-
-<div id="scriptTags">
-    <script src="assets/javascript/game.js"></script>
+        <div id="enemySelect"></div>
 </div>
 
 <div id="combat">
@@ -68,13 +72,18 @@
 
 <div id="fightSection">
     <h1 id="fightSectionHeading">Fight Section</h1>
-    <input type="button" onclick="something()" value="ATTACK!" name="attack">
+    <input type="button" onclick="combat()" value="ATTACK!" name="attack">
 </div>
 
-<div id="defenderDiv">
+<div id="defender">
     <h1 id="defenderHeading">Defender</h1>
+    <div id="defenderDiv"></div>
 </div>
 
+</div>
+
+<div id="scriptTags">
+        <script src="assets/javascript/game.js"></script>
 </div>
 
 </body>

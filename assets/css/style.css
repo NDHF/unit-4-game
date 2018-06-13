@@ -2,7 +2,7 @@ body {
     background-color: lightblue;
 }
 
-div.characterSelect {
+div#characterSelect {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -16,6 +16,26 @@ div.character {
     justify-content: center;
     align-items: center;
     margin: 0px 20px 0px 20px;
+}
+
+div#yourCharacterDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div#enemySelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.enemy {
+
+}
+
+#defenderDiv {
+    
 }
 
 div#luke {
