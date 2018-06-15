@@ -2,6 +2,15 @@ body {
     background-color: lightblue;
 }
 
+div#stats {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 div#characterSelect {
     display: flex;
     flex-direction: row;
@@ -31,7 +40,7 @@ div#enemySelect {
 }
 
 .enemy {
-
+    float: left;
 }
 
 #defenderDiv {
@@ -40,18 +49,22 @@ div#enemySelect {
 
 div#luke {
     background-color: green;
+    order: 1;
 }
 
 div#obiWan {
     background-color: blue;
+    order: 2;
 }
 
 div#sidious {
     background-color: darkgray;
+    order: 3;
 }
 
 div#maul {
     background-color: red;
+    order: 4;
 }
 
 div.characterPicDiv {
