@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
 var lukeHP = 100;
-var obiWanHP = 101;
-var darthSidiousHP = 102;
-var darthMaulHP = 103;
+var obiWanHP = 120;
+var darthSidiousHP = 150;
+var darthMaulHP = 180;
 
 var lukeBaseAttackPower = 6;
-var obiWanBaseAttackPower = 7;
+var obiWanBaseAttackPower = 8;
 var darthSidiousBaseAttackPower = 8;
 var darthMaulBaseAttackPower = 9;
 
@@ -89,23 +89,24 @@ $(".roster").on("click", function() {
 $("#combatButton").on("click", function() {
         // alert("Player is: " + $("div.yourCharacter").attr("id"));
         // alert("Enemy is: " + $("div.defender").attr("id"));
-        attackMultiplier++;
     
         var lukeAttack = lukeBaseAttackPower * attackMultiplier;
         var obiWanAttack = obiWanBaseAttackPower * attackMultiplier;
         var darthSidiousAttack = darthSidiousBaseAttackPower * attackMultiplier;
         var darthMaulAttack = darthMaulBaseAttackPower * attackMultiplier;
 
-        var lukeCounterattack = 10;
+        var lukeCounterattack = 5;
         var obiWanCounterattack = 11;
-        var darthSidiousCounterattack = 13;
-        var darthMaulCounterattack = 14;
+        var darthSidiousCounterattack = 20;
+        var darthMaulCounterattack = 25;
 
         if ($("#defenderDiv").is(":empty")) {
          
             $("#playerAttack").html("You must choose an opponent before attacking.");
             
         } else if ($("div.yourCharacter").attr("id") === "luke") {
+            attackMultiplier++;
+
     
             playerAttackMessage("Luke", lukeAttack)
     
@@ -129,6 +130,8 @@ $("#combatButton").on("click", function() {
                 enemyAttackMessage("Darth Maul", darthMaulCounterattack);
             } 
         } else if ($("div.yourCharacter").attr("id") === "obiWan") {
+            attackMultiplier++;
+
     
             playerAttackMessage("Obi-Wan", obiWanAttack)
     
@@ -152,6 +155,8 @@ $("#combatButton").on("click", function() {
                 enemyAttackMessage("Darth Maul", darthMaulCounterattack);
             } 
         } else if ($("div.yourCharacter").attr("id") === "sidious") {
+            attackMultiplier++;
+
     
             playerAttackMessage("Darth Sidious", darthSidiousAttack)
     
@@ -175,6 +180,8 @@ $("#combatButton").on("click", function() {
                 enemyAttackMessage("Darth Maul", darthMaulCounterattack);
             } 
         } else if ($("div.yourCharacter").attr("id") === "maul") {
+            attackMultiplier++;
+
     
             playerAttackMessage("Darth Maul", darthMaulAttack)
     
