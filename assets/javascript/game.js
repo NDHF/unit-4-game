@@ -27,6 +27,16 @@ function getStats(wins, losses){
 
     $("#playAgain").on("click", function() {
 
+    //Reset all stats
+            lukeHP = 100;
+            $("#lukeHP").html(lukeHP);
+            obiWanHP = 120;
+            $("#obiWanHP").html(obiWanHP);
+            darthSidiousHP = 150;
+            $("#sidiousHP").html(darthSidiousHP);
+            darthMaulHP = 180;
+            $("#maulHP").html(darthMaulHP);
+
     $("#characterSelect").append($(".enemy"));
     $("#characterSelect").append($(".yourCharacter"));
     $("#characterSelect").children().removeClass("enemy");
@@ -207,15 +217,24 @@ $("#combatButton").on("click", function() {
         }
         //The following will run if enemy's HP hits zero or lower
         if ($(".defender p").html() <= 0) {
-            //Reset all stats
-            lukeHP = 100;
-            $("#lukeHP").html(lukeHP);
-            obiWanHP = 101;
-            $("#obiWanHP").html(obiWanHP);
-            darthSidiousHP = 102;
-            $("#sidiousHP").html(darthSidiousHP);
-            darthMaulHP = 103;
-            $("#maulHP").html(darthMaulHP);
+
+            //This is supposed to save your current HP
+            var yourCurrentHP = $(".yourCharacter p").html();
+            //alert("Your current HP = " + yourCurrentHP);
+
+
+                //This block makes sure the player's HP is kept continuous from round to round
+                if ($(".yourCharacter").attr("id") === "luke") {
+                    lukeHP = yourCurrentHP;
+                } else if ($(".yourCharacter").attr("id") === "obiWan") {
+                    obiWanHP = yourCurrentHP;
+                } else if ($(".yourCharacter").attr("id") === "sidious") {
+                    darthSidiousHP = yourCurrentHP;
+                }  else if ($(".yourCharacter").attr("id") === "maul") {
+                    darthMaulHP = yourCurrentHP;
+                };
+
+         //   $(".yourCharacter p").html(yourCurrentHP);
 
             //Remove enemy from its div
             // $("#defenderDiv").children().remove();
